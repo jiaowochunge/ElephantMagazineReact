@@ -29,13 +29,13 @@ module.exports = merge.smart(commonConfig, {
               cacheDirectory: true
             }
           },
-          {
-            loader: 'eslint-loader',
-            options: {
-              cache: true,
-              fix: false
-            }
-          }
+          // {
+          //   loader: 'eslint-loader',
+          //   options: {
+          //     cache: true,
+          //     fix: false
+          //   }
+          // }
         ]
       }
     ]
