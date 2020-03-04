@@ -37,6 +37,16 @@ module.exports = merge.smart(commonConfig, {
           //   }
           // }
         ]
+      },
+      {
+        // BUG: 不加type这个域无法使用file-loader加载json https://github.com/webpack/webpack/issues/6586
+        type: 'javascript/auto',
+        test: /\.json$/,
+        include: /src\/assets/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        }
       }
     ]
   }

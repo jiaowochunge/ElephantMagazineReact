@@ -1,37 +1,65 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Switch,
   Route,
   Link
 } from 'react-router-dom'
 
+import { makeStyles } from '@material-ui/core/styles'
+
+import Container from '@material-ui/core/Container'
+import Divider from '@material-ui/core/Divider'
+
 import Post from 'app/Post'
+import PostListItem from 'app/PostListItem'
 
-export default class PostList extends React.Component {
+import reqPath from 'assets/sample.json'
 
-  render() {
-    return (
-      <div>
-        <h2>post list page</h2>
-        <ul>
-          <li>
-            <Link to={`/post/111`}>post 1</Link>
-          </li>
-          <li>
-            <Link to={`/post/222`}>post 2</Link>
-          </li>
-          <li>
-            <Link to={`/post/333`}>post 3</Link>
-          </li>
-        </ul>
+const useStyles = makeStyles(theme => ({
+  container: {
+    padding: 0,
+    //backgroundColor: theme.palette.background.default
+  },
+}))
 
-        <Switch>
-          <Route path={`/post/:postId`}>
-            <Post />
-          </Route>
-        </Switch>
-      </div>
-    )
-  }
+export default function PostList() {
+  const classes = useStyles()
 
+  const [refresh, setRefresh] = useState(true)
+  const [listData, setListData] = useState([])
+  useEffect(() => {
+    if (refresh) {
+      fetch(reqPath)
+        .then(res => res.json())
+        .then(result => {
+          if (result.head.code == 0) {
+            setListData(result.body.article)
+          } else {
+            alert(result.head.message)
+          }
+        }, error => {
+          alert(error)
+        })
+
+      setRefresh(false)
+    }
+  })
+
+  return (
+    <Container className={classes.container}>
+      {
+        listData.map((data, index) => (
+          <Link to={`/post/${data.id}`} key={index}>
+            <PostListItem post={data} />
+            <Divider />
+          </Link>
+        ))
+      }
+      <Switch>
+        <Route path={`/post/:postId`}>
+          <Post />
+        </Route>
+      </Switch>
+    </Container>
+  )
 }

@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Demo App',
+      title: 'Elephant Magazine',
       template: './src/index.ejs'
     })
   ],
@@ -18,7 +18,7 @@ module.exports = {
       path.resolve(__dirname, "src"),
       "node_modules"
     ],
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
