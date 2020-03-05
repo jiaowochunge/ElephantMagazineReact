@@ -201,7 +201,7 @@ function HideOnScrollAppBar(props) {
       <div>
         <AppBar>
           <Toolbar>
-            <IconButton edge='start' color='inherit' aria-label='menu'
+            <IconButton edge='start' color='inherit' aria-label='back'
               onClick={e => history.goBack()}
             >
               <ArrowBack />

@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry:  './src/app/index.js',
@@ -11,12 +12,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Elephant Magazine',
       template: './src/index.ejs'
-    })
+    }),
+    new CopyPlugin([{
+      from: 'src/assets/img/',
+      to: 'www/assets/img/',
+      ignore: ['.DS_Store']
+    }
+
+    ], { logLevel: 'debug' })
   ],
   resolve: {
     modules: [
-      path.resolve(__dirname, "src"),
-      "node_modules"
+      path.resolve(__dirname, 'src'),
+      'node_modules'
     ],
     extensions: ['.js', '.jsx']
   },

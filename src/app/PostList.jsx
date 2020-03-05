@@ -13,7 +13,7 @@ import Divider from '@material-ui/core/Divider'
 import Post from 'app/Post'
 import PostListItem from 'app/PostListItem'
 
-import reqPath from 'assets/sample.json'
+import reqPath from 'assets/sample-article-list.json'
 
 const useStyles = makeStyles(theme => ({
   container: {

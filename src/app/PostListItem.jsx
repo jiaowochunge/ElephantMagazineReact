@@ -11,7 +11,9 @@ import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import { red, orange } from '@material-ui/core/colors'
-import GradeIcon from '@material-ui/icons/Grade';
+import GradeIcon from '@material-ui/icons/Grade'
+
+import { formatDate } from 'app/simpleUtil'
 
 const useStyles = makeStyles(theme => ({
   head: {
@@ -34,20 +36,6 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(2)
   }
 }))
-
-function formatDate(timestamp) {
-  const date = new Date(timestamp)
-  let m = date.getMonth() + 1
-  if (m < 10) {
-    m = '0' + m
-  }
-  let d = date.getDate()
-  if (d < 10) {
-    d = '0' + d
-  }
-
-  return `${date.getFullYear()}-${m}-${d}`
-}
 
 export default function PostListItem(props) {
   const { post, ...others } = props

@@ -1,0 +1,265 @@
+/*
+    article style
+*/
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, Hiragino Sans GB, 冬青黑体，华文黑体, STHei, "Microsoft YaHei", 微软雅黑, sans-serif;
+    padding: 33px 22px 0;
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn,
+strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.article-header h1 {
+    color: #332e24;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.article-header h6 {
+    color: #656158;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    font-size: 12px;
+    position: relative;
+}
+
+.article-body  h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 15px 0;
+    font-weight: normal;
+}
+
+.article-body h5 {
+    padding: 10px 0 30px 0;
+    font-size: 13px;
+    color: #c6c5c3;
+    background-image: url(../img/article-eof.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 6.94% auto;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+.article-body h2 {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #545046;
+    line-height: 1.5;
+    margin-top: 35px;
+}
+
+.article-body h2 strong {
+    font-weight: bolder;
+}
+
+.article-body h6 {
+    text-align: center;
+    margin-top: -2px;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #c6c5c3;
+}
+
+.article-body p {
+    color: #656158;
+    line-height: 1.6;
+    word-break: break-word;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+}
+
+.article-body img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+}
+
+.article-copy {
+    margin: 20px 0 50px 0;
+}
+
+.article-copy img {
+    width: 67%;
+    display: block;
+    margin: 0 auto;
+}
+
+.article-static {
+    margin-top: 15px;
+    overflow: hidden;
+    color: #c1c0bf;
+    font-size: 12px;
+}
+
+.article-static .date {
+    float: left;
+}
+
+.article-static .number {
+    float: right;
+}
+
+@media screen and (min-width:415px) {
+    .article-body h5 {
+        background-size: 4.94% auto;
+    }
+
+}
+/* 小 */
+
+.screen-s {
+}
+.screen-s .article-header h1 {
+    font-size: 17px;
+}
+.screen-s .article-header h6 {
+    font-size: 11px;
+}
+.screen-s .article-body h2 {
+    font-size: 15px;
+}
+.screen-s .article-body h5 {
+    font-size: 12px;
+}
+.screen-s .article-body h6 {
+    font-size: 12px;
+}
+.screen-s .article-body p {
+    font-size: 14px;
+}
+.screen-s .article-static {
+    font-size: 11px;
+}
+
+/* 较大 */
+.screen-xl {
+}
+.screen-xl .article-header h1 {
+    font-size: 19px;
+}
+.screen-xl .article-header h6 {
+    font-size: 13px;
+}
+.screen-xl .article-body h2 {
+    font-size: 17px;
+}
+.screen-xl .article-body h5 {
+    font-size: 15px;
+}
+.screen-xl .article-body h6 {
+    font-size: 14px;
+}
+.screen-xl .article-body p {
+    font-size: 16px;
+}
+.screen-xl .article-static {
+    font-size: 13px;
+}
+
+/* 大 */
+.screen-xxl {
+
+}
+.screen-xxl .article-header h1 {
+    font-size: 20px;
+}
+.screen-xxl .article-header h6 {
+    font-size: 14px;
+}
+.screen-xxl .article-body h2 {
+    font-size: 19px;
+}
+.screen-xxl .article-body h5 {
+    font-size: 16px;
+}
+.screen-xxl .article-body h6 {
+    font-size: 15px;
+}
+.screen-xxl .article-body p {
+    font-size: 18px;
+}
+.screen-xxl .article-static {
+    font-size: 14px;
+}
+
+/* 超大 */
+.screen-xxxl {
+
+}
+.screen-xxxl .article-header h1 {
+    font-size: 21px;
+}
+.screen-xxxl .article-header h6 {
+    font-size: 16px;
+}
+.screen-xxxl .article-body h2 {
+    font-size: 19px;
+}
+.screen-xxxl .article-body h5 {
+    font-size: 16px;
+}
+.screen-xxxl .article-body h6 {
+    font-size: 16px;
+}
+.screen-xxxl .article-body p {
+    font-size: 18px;
+}
+.screen-xxxl .article-static {
+    font-size: 14px;
+}

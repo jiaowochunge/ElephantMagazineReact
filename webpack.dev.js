@@ -4,7 +4,7 @@ const merge = require('webpack-merge')
 const commonConfig = require('./webpack.config.js')
 
 module.exports = merge.smart(commonConfig, {
-  devtool: "source-map",
+  devtool: 'source-map',
   devServer: {
     contentBase: './www',
     open: true,
