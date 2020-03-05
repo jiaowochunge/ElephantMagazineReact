@@ -129,7 +129,9 @@ const listItems = [
       {
         title: '关于开发者',
         subTitle: null,
-        action: defaultItemClickAction,
+        action: function() {
+          this.history.push('/setting/about-developer')
+        },
         hasIcon: true
       }
     ]

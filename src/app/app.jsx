@@ -15,12 +15,14 @@ import Setting from 'app/Setting'
 import PostList from 'app/PostList'
 import Post from 'app/Post'
 import UserExperience from 'app/UserExperience'
+import AboutDeveloper from 'app/AboutDeveloper'
 
 // render to DOM
 ReactDOM.render(
   <Router>
     <Switch>
       <Route path='/setting/user-experience' component={UserExperience} />
+      <Route path='/setting/about-developer' component={AboutDeveloper} />
       <Route path='/setting' component={Setting} />
       <Route path='/posts' component={Home} />
       <Route path='/post/:postId' component={Post} />
