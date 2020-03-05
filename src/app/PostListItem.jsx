@@ -43,7 +43,7 @@ export default function PostListItem(props) {
 
   const [fav, setFav] = useState(false)
   useEffect(() => {
-    // 模拟查询
+    // FIXME: 模拟查询
     setTimeout(() => {
       Math.random() > 0.8 ? setFav(true) : setFav(false)
     }, 100)

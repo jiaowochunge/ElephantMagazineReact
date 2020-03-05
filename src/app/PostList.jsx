@@ -29,6 +29,7 @@ export default function PostList() {
   const [listData, setListData] = useState([])
   useEffect(() => {
     if (refresh) {
+      // FIXME: 使用的本地模拟数据
       fetch(reqPath)
         .then(res => res.json())
         .then(result => {

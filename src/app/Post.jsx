@@ -94,6 +94,7 @@ export default function Post(props) {
   const { postId } = useParams()
   const [post, setPost] = useState(null)
   useEffect(() => {
+    // FIXME: 使用的本地模拟数据
     fetch(reqPath)
       .then(res => res.json())
       .then(result => {
