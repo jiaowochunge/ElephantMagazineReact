@@ -10,10 +10,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "ecosystem:cordova", "elephantMagazine"
   ],
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0",
+  "author": "jiaowochunge",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiaowochunge/ElephantMagazineReact.git"
+  },
   "dependencies": {
     "cordova-browser": "^6.0.0"
   },
