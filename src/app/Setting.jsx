@@ -121,7 +121,9 @@ const listItems = [
       {
         title: '用户体验改进计划',
         subTitle: null,
-        action: defaultItemClickAction,
+        action: function() {
+          this.history.push('/setting/user-experience')
+        },
         hasIcon: true
       },
       {
@@ -141,7 +143,12 @@ function defaultItemClickAction() {
 export default function Setting(props) {
 
   const classes = useStyles()
+  const history = useHistory()
   const itemClasses = useListItemStyles()
+
+  const ctx = {
+    history
+  }
 
   return (
     <Container className={classes.body}>
@@ -161,7 +168,7 @@ export default function Setting(props) {
               <List classes={{padding: classes.blockList}}>
               {
                 block.block.map((item, index, array) => (
-                  <ListItem divider={array.length - index > 1} onClick={item.action} key={index} classes={{secondaryAction: itemClasses.secondaryAction}}>
+                  <ListItem divider={array.length - index > 1} onClick={item.action.bind(ctx)} key={index} classes={{secondaryAction: itemClasses.secondaryAction}}>
                     <ListItemText
                       primary={item.title}
                       secondary={item.subTitle}
