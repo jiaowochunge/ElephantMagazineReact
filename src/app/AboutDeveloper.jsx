@@ -10,7 +10,7 @@ import Link from '@material-ui/core/Link'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import ListItemText from '@material-ui/core/ListItemText'
 import Paper from '@material-ui/core/Paper'
@@ -41,7 +41,6 @@ export default function AboutDeveloper(props) {
   const classes = useStyles()
   const history = useHistory()
 
-
   return (
     <Container className={classes.container}>
       <AppBar>
@@ -61,9 +60,9 @@ export default function AboutDeveloper(props) {
       </Paper>
       <Paper className={classes.stack}>
         <List
-          component="nav"
+          component='nav'
           subheader={
-            <ListSubheader component="div">
+            <ListSubheader component='div'>
               鸣谢
             </ListSubheader>
           }>

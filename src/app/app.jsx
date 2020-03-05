@@ -16,6 +16,7 @@ import PostList from 'app/PostList'
 import Post from 'app/Post'
 import UserExperience from 'app/UserExperience'
 import AboutDeveloper from 'app/AboutDeveloper'
+import CustomDialog from 'app/CustomDialog'
 
 // render to DOM
 ReactDOM.render(
@@ -28,6 +29,7 @@ ReactDOM.render(
       <Route path='/post/:postId' component={Post} />
       <Route exact path='/' component={Home} />
     </Switch>
+    <CustomDialog />
   </Router>,
   document.getElementById('app')
 )
