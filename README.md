@@ -4,7 +4,8 @@ Elephant Magazine on React
 
 ### 关于项目
 大象公会的仿制版。是对项目 https://github.com/jiaowochunge/DemoWebApp 的实践。<br/>
-组件库用的material-ui，路由用的react-router。都是名声在外的库，就不介绍了。
+组件库用的material-ui，路由用的react-router。都是名声在外的库，就不介绍了。<br/>
+![gif](https://github.com/jiaowochunge/ElephantMagazineReact/blob/master/em.gif)
 
 ### 运行项目
 1. 确保你已经安装Cordova，如果你不用在移动端运行，只用在浏览器上看效果，那么不是必须
