@@ -12,14 +12,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Elephant Magazine',
       template: './src/index.ejs'
-    }),
-    new CopyPlugin([{
-      from: 'src/assets/img/',
-      to: 'www/assets/img/',
-      ignore: ['.DS_Store']
-    }
-
-    ], { logLevel: 'debug' })
+    })
   ],
   resolve: {
     modules: [
@@ -49,7 +42,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: './asset/img/[hash].[ext]'
+            name: './assets/img/[hash].[ext]'
           }
         }
       },

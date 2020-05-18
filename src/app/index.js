@@ -21,7 +21,7 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         // 开发模式下，不会有这个事件发生，我们自己手动调用
-        if (process.env.NODE_ENV === 'development') {
+        if (process.env.NODE_ENV === 'development' || !window.cordova) {
           this.onDeviceReady();
         }
     },

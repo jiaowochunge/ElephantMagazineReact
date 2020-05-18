@@ -30,17 +30,21 @@ export default function PostList() {
   useEffect(() => {
     if (refresh) {
       // FIXME: 使用的本地模拟数据
-      fetch(reqPath)
-        .then(res => res.json())
-        .then(result => {
-          if (result.head.code == 0) {
-            setListData(result.body.article)
-          } else {
-            alert(result.head.message)
-          }
-        }, error => {
-          alert(error)
-        })
+      if (process.env.NODE_ENV == 'development') {
+        fetch(reqPath)
+          .then(res => res.json())
+          .then(result => {
+            if (result.head.code == 0) {
+              setListData(result.body.article)
+            } else {
+              alert(result.head.message)
+            }
+          }, error => {
+            alert(error.message)
+          })
+      } else {
+        setListData(reqPath.body.article)
+      }
 
       setRefresh(false)
     }

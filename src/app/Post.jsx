@@ -95,17 +95,21 @@ export default function Post(props) {
   const [post, setPost] = useState(null)
   useEffect(() => {
     // FIXME: 使用的本地模拟数据
-    fetch(reqPath)
-      .then(res => res.json())
-      .then(result => {
-        if (result.head.code == 0) {
-          setPost(result.body.article)
-        } else {
-          alert(result.head.message)
-        }
-      }, error => {
-        alert(error)
-      })
+    if (process.env.NODE_ENV == 'development') {
+      fetch(reqPath)
+        .then(res => res.json())
+        .then(result => {
+          if (result.head.code == 0) {
+            setPost(result.body.article)
+          } else {
+            alert(result.head.message)
+          }
+        }, error => {
+          alert(error.message)
+        })
+    } else {
+      setPost(reqPath.body.article)
+    }
   })
 
   const loadingView = (
